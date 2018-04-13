@@ -1,0 +1,65 @@
+nav ul li {
+    display: inline;
+    border: 1px solid #000000;
+   /* margin: 100px 20px 100px 20px; */
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgb(199,146,46);
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav {
+     text-align: center;
+}
+
+h1{
+    text-align: center;
+    border: 2px solid ;
+    background-color: rgb(199,146,46);
+    text-shadow: rgb(0,0,0) 1px 1px 1px;
+    background: -webkit-linear-gradient(top, #FFFFFF, rgb(199,146,46));
+     
+}
+
+.botonactivo{
+ background-color: #2EFE2E ;
+ font-weight: bold;
+}
+
+nav ul li:hover{
+     background-color: yellow;
+}
+
+footer{ text-align: center;
+}
+
+footer a{
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+
+.cajatexto{
+    
+    text-align: right
+
+}
+/*añadir fuente*/
+@font-face {
+    font-family: nueva;
+    src: url(../fuente/fuente3.ttf);
+}
+
+*{
+    font-family: nueva;
+}
+
+
+
+

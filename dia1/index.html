@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    
+     <meta charset="utf-8">
+     <meta name="description" content="Ejemplo de HTML5">
+     <meta name="keywords" content="HTML5, CSS3, Javascript">
+     
+     
+     <!-- LLamada a la pagina de estilos-->
+     <link rel="stylesheet" href="css/estilos.css">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+     <script src="js/funciones.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+     <script>
+          $(document).ready(function() {
+               $('#example').DataTable({
+                    "language": {
+                         "lengthMenu": "Mostrar _MENU_ datos por página",
+                         "zeroRecords": "Ningún resultado - lo siento",
+                         "info": "Mostrando página _PAGE_ de _PAGES_",
+                         "infoEmpty": "Ningún dato disponible",
+                         "infoFiltered": "(filtrar por _MAX_ total records)",
+                         "sSearch":     "Buscar:",
+                         "oPaginate":    {
+                              "sFirst": "Primero",
+                              "sLast":  "Ultimo",
+                              "sNext":  "Siguiente",
+                              "sPrevious":   "Anterior"
+                         }
+                     },
+                    "order": [[ 1, "asc"]]
+               });
+          } );
+     </script>
+     <script>
+         /* var dataSet = [
+               ["Javier", 3500, 100],
+               ["Fran", 2000, 200],
+               ["Ana", 2750, 100]
+          ];*/
+          
+          $(document).ready(function() {
+               $('#ejemplo').DataTable( {
+                    data: dataSet, //llamamos a la variable
+                    columns: [
+                        { title: "Nombre" },
+                        { title: "Salario" },
+                        { title: "Horas" }
+                    ]
+               } );
+          } );
+     </script>
+     <title> </title>
+</head>
+
+<body>
+<!-- cabecera de la pagina -->
+     <header>
+           <h1>Este es el titulo principal</h1>
+     </header>
+
+<!--  justo debajo de la cabecera, menu... -->
+     <nav>
+           <ul>
+                 <li class="botonactivo">Home</li>
+                 <li> <a href="contacto.html">Contacto</a></li>
+          </ul>
+         
+     </nav>
+
+<!-- contenedor del centro -->
+     <section>
+          <!-- imagenes si puede ser el width al 100% -->
+          <img src="imagenes/imagen1.jpeg" alt="Ordenador de mesa" title="Esto se vera al pasar el raton" width="20%" >
+          <small>Derechos Reservados &copy; 2011 MinkBooks</small>
+          <h1>Titulo</h1>
+          <p id="parrafo1">Soy un parrafo </p>
+          <p onclick="muestratexto()">Haz click</p>
+          <p id="nombre">Pablo</p>
+          <p id="apellidos">Espada Albendea</p>
+          <p id="nombrecompleto"></p>
+          <p onclick="concatena_nombre()">Concatenar</p>
+          
+          <input type="number" id="num1">
+          <input type="number" id="num2"><br>
+          <input type="button" value="suma" onclick="suma()">
+          <input type="button" value="resta" onclick="resta()">
+          <input type="button" value="multiplicacion" onclick="multiplicacion()">
+          <input type="button" value="division" onclick="division()">
+          <input type="button" value="potencia" onclick="potencia()">
+          <input type="button" value="pares" onclick="pares()">
+          <br>
+          Resultado:
+          <input type="text" id="resul1">
+          
+          
+          <p>Listado de Coches:<a onclick="muestracoches()">(listado)</a></p>
+          <p id="listado_coches"></p>
+          <p onclick="calcularpesos()">Calcular pesos:</p>
+          <p id="numtotal"></p>
+          
+          <p onclick="notas()">Notas</p>
+          <p id="calificaciones"></p>
+          
+          <p onclick="empresa()">Ejercicio</p>
+          <p id="max_cobra"></p>
+          <p id="max_trabajan"></p>
+          <p id="salario_medio"></p>
+          
+          <table id="example">
+               <thead>
+                    <tr>
+                         <th>NOMBRE</th>
+                         <th>SUELDO</th>
+                         <th>HORAS</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                         <td>Javier</td>
+                         <td>3500</td>
+                         <td>100</td>
+                    </tr>
+                    <tr>
+                         <td>Fran</td>
+                         <td>2000</td>
+                         <td>200</td>
+                    </tr>
+                    <tr>
+                         <td>Ana</td>
+                         <td>2500</td>
+                         <td>150</td>
+                    </tr>
+               </tbody>
+          </table>
+          
+          <table id="ejemplo"></table>
+          
+          <article>Soy un <em>article</em> en cursiva </article>
+          <article>Soy un segundo <strong>article</strong> en negrita </article>
+          <p onclick="mensaje()" class="rojo">Cancion de BadBunny<sup>Muy Top</sup></p>
+          <audio id="medio" controls>
+               <source src="sonido/Madura.mp3">
+          </audio>  
+          <p>MELENDI <sub>muy</sub> TOP</p>
+           
+          <video id="medio" width="100%" height="40%" preload controls loop poster="imagenes/fotomelendi.jpg">     
+               <source src="videos/melendi.mp4">
+          </video>
+          
+     </section>
+     
+<!--  barra lateral-->
+     <aside>
+          <blockquote>Mensaje número uno</blockquote>
+          <blockquote>Mensaje número dos</blockquote>
+     </aside>
+     
+<!--  pie de pagina -->
+     <footer>
+         <p id="piepagina"> Derechos Reservados &copy; 2010-2011 <a href="http://google.com" target="_blank"> Carlos Codes </a> </p>        
+     </footer>
+     </body>
+</html>

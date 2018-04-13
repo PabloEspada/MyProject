@@ -1,0 +1,101 @@
+/* se puede llamar por la palabra clave
+   por el atributo id
+   y por el atributo class
+*/
+
+p {
+    font-size: 20px;
+   
+}
+
+#piepagina {
+    color: green;
+}
+
+.rojo {
+    color: red;
+    font-weight: bold;
+}
+
+* {
+    font-family: arial, verdana;
+}
+
+header,section,aside,nav,footer,article {
+    
+    display: block;    
+}
+
+footer a{
+    color: #00ff00;
+   
+}
+
+footer {
+    text-align: center;
+    clear: both;
+}
+section {
+     width: 70%;
+     float: left;
+     background: #cccccc; 
+}
+aside {
+    float: left;
+    width: 30%;
+    background: #cc44cc;
+}
+
+nav ul li {
+    display: inline;
+    border: 1px solid #000000;
+   /* margin: 100px 20px 100px 20px; */
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px red;
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    
+}
+
+nav ul li:hover{
+     background-color: yellow;
+}
+nav {
+    margin-bottom:  50px;
+}
+
+.botonactivo{
+ background-color: yellow;
+}
+
+
+
+
+/*Diseño movil */
+
+@media only screen and (max-width: 600px){
+    section{
+         width: 100%;
+    }
+    aside{
+         width: 100%;
+    }
+    nav ul li{
+        display: block;
+    }
+    
+}
+
+/*TABLA*/
+table{
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px black;
+}
+table, th, td{
+    border: 1px solid #333333;
+}
+th, td{
+    padding: inherit;
+}
